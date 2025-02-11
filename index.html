@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Website</title>
+    <title>Contact Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <button id="contactButton">Contact Us</button>
+<body class="bg-gray-50 font-sans">
 
+    <!-- Main Content Section -->
+    <div class="flex flex-col items-center justify-center min-h-screen py-6 px-4">
+        
+        <!-- Heading -->
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">Contact Us</h1>
+        
+        <!-- Contact Button -->
+        <button onclick="openContactPage()" class="bg-blue-600 text-white text-xl px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none transform transition duration-300 ease-in-out hover:scale-105">
+            Contact Us
+        </button>
+
+        <!-- Instructions Text -->
+        <p class="mt-6 text-gray-700 text-lg text-center">
+            If the link doesn't open properly in TikTok's browser, please copy and paste the link into your browser.
+        </p>
+        
+        <!-- GitHub Website Link -->
+        <p class="mt-4 text-xl font-medium text-blue-600">
+            <a href="https://keochanmaridodev.github.io/website/" target="_blank" id="githubLink" class="hover:text-blue-800">
+                https://keochanmaridodev.github.io/website/
+            </a>
+        </p>
+
+    </div>
+
+    <!-- Script to handle the button click -->
     <script>
-        document.getElementById('contactButton').addEventListener('click', function() {
-            // Display a message to open the link in another browser
-            alert("Please open this link in your browser: https://keochanmaridodev.github.io/website/");
-
-            // Redirect to the second website in the TikTok browser (or an external browser if possible)
-            window.location.href = "https://keochanmaridodev.github.io/website/";
-        });
+        function openContactPage() {
+            // Open the GitHub website in a new tab or window
+            window.open('https://keochanmaridodev.github.io/website/', '_blank');
+        }
     </script>
 </body>
 </html>
